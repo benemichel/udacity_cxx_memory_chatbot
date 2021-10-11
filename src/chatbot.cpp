@@ -45,64 +45,63 @@ ChatBot::~ChatBot()
 //// STUDENT CODE
 // copy assignment operator
 ChatBot& ChatBot::operator=(const ChatBot &source) {
-    std::cout << "ChatBot: copy assignment operator called" << "\n";
+    std::cout << "ChatBot Copy Assignment Operator" << "\n";
 
     // prevent self-assignment
     if(this == &source) {       
         return *this;
     }
 
-    _image = source._image;
+    delete _image;
+    _image = new wxBitmap();
+    *_image = *source._image;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
-    _currentNode = source._currentNode;
+    _chatLogic->SetChatbotHandle(this);
 
     return *this;
 }
 
 // copy constructor
-ChatBot::ChatBot(const ChatBot &source) {
+ChatBot::ChatBot( ChatBot &source) {
     std::cout << "ChatBot: copy constructor called" << "\n";
+    _image = new wxBitmap();
     _image = source._image;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
-    _currentNode = source._currentNode;
+    _chatLogic->SetChatbotHandle(this);
 }
 
 // move constructor
 ChatBot::ChatBot(ChatBot &&source) {
-    std::cout << "ChatBot: move constructor called" << "\n";
+    std::cout << "ChatBot Move Constructor" << "\n";
     _image = source._image;
     _chatLogic = source._chatLogic;
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
-    _currentNode = source._currentNode;
-
+    
     // invalidate
     source._image = nullptr;
     source._chatLogic = nullptr;
     source._rootNode = nullptr;
-    source._currentNode = nullptr;
 }
 
 // move assignment operator
 ChatBot& ChatBot::operator=(ChatBot &&source) {
-    std::cout << "ChatBot: move assignment operator called" << "\n";
+    std::cout << "ChatBot Move  Assignment" << "\n";
 
-    // prevent self-assignment
-    if(this == &source) {       
+    if (this == &source) {
         return *this;
     }
-
     _image = source._image;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
-    _currentNode = source._currentNode;
+    _chatLogic->SetChatbotHandle(this);
 
     // invalidate
     source._image = nullptr;
     source._chatLogic = nullptr;
     source._rootNode = nullptr;
-    source._currentNode = nullptr;
 
     return *this;
 }
