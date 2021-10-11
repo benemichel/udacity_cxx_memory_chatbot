@@ -44,8 +44,8 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 // copy assignment operator
-ChatBot::&operator=(const ChatBot &source) {
-    std::cout << "ChatBot: copy assignment operator called" + "\n";
+ChatBot& ChatBot::operator=(const ChatBot &source) {
+    std::cout << "ChatBot: copy assignment operator called" << "\n";
 
     // prevent self-assignment
     if(this == &source) {       
@@ -62,7 +62,7 @@ ChatBot::&operator=(const ChatBot &source) {
 
 // copy constructor
 ChatBot::ChatBot(const ChatBot &source) {
-    std::cout << "ChatBot: copy constructor called" + "\n";
+    std::cout << "ChatBot: copy constructor called" << "\n";
     _image = source._image;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
@@ -70,8 +70,8 @@ ChatBot::ChatBot(const ChatBot &source) {
 }
 
 // move constructor
-ChatBot::ChatBot(const ChatBot &&source) {
-    std::cout << "ChatBot: move constructor called" + "\n";
+ChatBot::ChatBot(ChatBot &&source) {
+    std::cout << "ChatBot: move constructor called" << "\n";
     _image = source._image;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
@@ -85,8 +85,8 @@ ChatBot::ChatBot(const ChatBot &&source) {
 }
 
 // move assignment operator
-ChatBot::&operator=(const ChatBot &&source) {
-    std::cout << "ChatBot: move assignment operator called" + "\n";
+ChatBot& ChatBot::operator=(ChatBot &&source) {
+    std::cout << "ChatBot: move assignment operator called" << "\n";
 
     // prevent self-assignment
     if(this == &source) {       

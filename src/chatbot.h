@@ -28,9 +28,9 @@ public:
     ~ChatBot();
 
     //// STUDENT CODE
-    ChatBot(Chatbot &source);
-    ChatBot(Chatbot &&source);
-    ChatBot &operator=(ChatBot &source);
+    ChatBot(const ChatBot &source);
+    ChatBot(ChatBot &&source);
+    ChatBot &operator=(const ChatBot &source);
     ChatBot &operator=(ChatBot &&source);
     //// EOF STUDENT CODE
 
