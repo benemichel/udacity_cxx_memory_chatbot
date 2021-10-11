@@ -28,9 +28,10 @@ public:
     ~ChatBot();
 
     //// STUDENT CODE
-    ////
-
-    ////
+    ChatBot(Chatbot &source);
+    ChatBot(Chatbot &&source);
+    ChatBot &operator=(ChatBot &source);
+    ChatBot &operator=(ChatBot &&source);
     //// EOF STUDENT CODE
 
     // getters / setters
