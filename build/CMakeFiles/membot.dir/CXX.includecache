@@ -45,10 +45,14 @@ chatlogic.h
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/chatlogic.h
 chatgui.h
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/chatgui.h
+memory
+/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/memory
 
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/chatgui.h
 wx/wx.h
 -
+memory
+/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/memory
 
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/chatlogic.cpp
 fstream
@@ -82,23 +86,11 @@ string
 chatgui.h
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/chatgui.h
 
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphedge.cpp
-graphnode.h
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphnode.h
-graphedge.h
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphedge.h
-
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphedge.h
 vector
 -
 string
 -
-
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphnode.cpp
-graphedge.h
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphedge.h
-graphnode.h
-/home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphnode.h
 
 /home/benedikt/coding/projects/udacity_cxx/CppND-Memory-Management-Chatbot/src/graphnode.h
 vector
